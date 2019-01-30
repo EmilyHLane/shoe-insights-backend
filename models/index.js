@@ -12,5 +12,5 @@ mongoose
   .catch(err => console.log(`connection error ${err}`));
 
 module.exports = {
-  Shoe: require("./Shoe")
+  Shoe: require("./shoe")
 };
