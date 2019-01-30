@@ -27,4 +27,6 @@ app.get("/", (req, res) => res.send("hello world"));
 app.use("/api/shoe", shoeRouter);
 
 // Start server
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.listen(process.env.PORT || 3000, () =>
+  console.log(`Server listening on port ${port}`)
+);
