@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // HTML endpoints
-app.get("/", (req, res) => res.send("hello world"));
+// app.get("/", (req, res) => res.send("hello world"));
 
 // API endpoints
 app.use("/api/shoe", shoeRouter);
