@@ -84,4 +84,8 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# db backup and dump to mlab
+db-backup
+dump
+
 # End of https://www.gitignore.io/api/node
