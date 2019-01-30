@@ -26,7 +26,10 @@ app.get("/", (req, res) => res.send("hello world"));
 // API endpoints
 app.use("/api/shoe", shoeRouter);
 
+// catchall route handler
+app.get("*", (req, res) => {
+  res.send("<h1>404: Not Found...</h1>");
+});
+
 // Start server
-app.listen(process.env.PORT || 3000, () =>
-  console.log(`Server listening on port ${port}`)
-);
+app.listen(port, () => console.log(`Server listening on port ${port}`));

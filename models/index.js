@@ -9,7 +9,7 @@ mongoose
     { useNewUrlParser: true }
   )
   .then(() => console.log(`Mongodb connected on port: ${port}`))
-  .catch(err => console.log(err));
+  .catch(err => console.log(`connection error ${err}`));
 
 module.exports = {
   Shoe: require("./Shoe")
