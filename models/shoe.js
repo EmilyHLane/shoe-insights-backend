@@ -3,12 +3,12 @@ const Schema = mongoose.Schema;
 
 // build for boots test then expand
 // would this be better as a SQL table?
-// for numbers, use string or number?
+// for numbers, use string or number? --> use number
 const ShoeSchema = new Schema({
   gender: String,
   category: String,
   subCategory: String,
-  womensSize: String,
+  womensSize: Number,
   womensWidth: String,
   brand: String,
   price: String,
@@ -22,7 +22,7 @@ const ShoeSchema = new Schema({
   features: String,
   performance: String,
   theme: String,
-  footShape: String
+  footShape: Number
 });
 
 const Shoe = mongoose.model("Shoe", ShoeSchema);
