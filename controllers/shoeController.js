@@ -51,6 +51,7 @@ const update = (req, res) => {
       res.json(updatedShoe);
     }
   );
+  console.log("ok");
 };
 
 module.exports = { index, create, update };
