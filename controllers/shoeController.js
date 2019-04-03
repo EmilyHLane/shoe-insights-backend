@@ -40,4 +40,17 @@ const create = (req, res) => {
   );
 };
 
-module.exports = { index, create };
+// find by ID and update
+const update = (req, res) => {
+  Shoe.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedShoe) => {
+      if (err) throw err;
+      res.json(updatedShoe);
+    }
+  );
+};
+
+module.exports = { index, create, update };

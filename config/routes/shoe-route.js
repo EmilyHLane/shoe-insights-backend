@@ -8,4 +8,7 @@ router.get("/", ctrl.index);
 // create boots test
 router.post("/", ctrl.create);
 
+// update boots test
+router.put("/:id", ctrl.update);
+
 module.exports = router;
