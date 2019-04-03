@@ -1,28 +1,24 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// build for boots test then expand
-// would this be better as a SQL table?
-// for numbers, use string or number? --> use number
+// build for beta - womens's shoes only
 const ShoeSchema = new Schema({
   gender: String,
   category: String,
-  subCategory: String,
   womensSize: Number,
   womensWidth: String,
   brand: String,
   price: String,
-  color: String,
-  bootShaft: String,
-  heelHeight: String,
-  heelStyle: String,
-  toeStyle: String,
-  occasion: String,
-  materials: String,
-  features: String,
-  performance: String,
-  theme: String,
-  footShape: Number
+  footShape: Number,
+  results: [
+    {
+      shoelink: String,
+      shoeName: String,
+      shoeBrand: String,
+      shoeStyle: String,
+      shoePrice: String
+    }
+  ]
 });
 
 const Shoe = mongoose.model("Shoe", ShoeSchema);
