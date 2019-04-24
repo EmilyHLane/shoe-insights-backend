@@ -1,16 +1,23 @@
 const db = require("../models");
 const Shoe = db.Shoe;
 
-// get all boots
+// get all shoes
 const index = (req, res) => {
-  Shoe.find({}, (err, allBoots) => {
+  Shoe.find({}, (err, allShoes) => {
     if (err) throw err;
-    res.json(allBoots);
+    res.json(allShoes);
   });
 };
 
-// create a new boot
-// TODO: convert to lowercase here or earlier?
+// find one by ID
+const show = (req, res) => {
+  Shoe.findById(req.params.id, (err, showShoe) => {
+    if (err) throw err;
+    res.json(showShoe);
+  });
+};
+
+// create a new shoe
 const create = (req, res) => {
   Shoe.create(
     {
@@ -54,4 +61,4 @@ const update = (req, res) => {
   console.log(res);
 };
 
-module.exports = { index, create, update };
+module.exports = { index, create, update, show };

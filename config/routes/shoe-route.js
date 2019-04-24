@@ -2,13 +2,16 @@ const express = require("express");
 const router = express.Router();
 ctrl = require("../../controllers/shoeController");
 
-// get all boots test
+// get all shoes
 router.get("/", ctrl.index);
 
-// create boots test
+// create shoe
 router.post("/", ctrl.create);
 
-// update boots test
+// get shoe by id
+router.get("/:id", ctrl.show);
+
+// update shoe
 router.put("/:id", ctrl.update);
 
 module.exports = router;

@@ -26,6 +26,8 @@ app.get("/", (req, res) => res.send("hello world"));
 // API endpoints
 app.use("/api/shoe", shoeRouter);
 
+// app.use("/api/shoe/:id", shoeRouter);
+
 // catchall route handler
 app.get("*", (req, res) => {
   res.send("<h1>404: Not Found...</h1>");
